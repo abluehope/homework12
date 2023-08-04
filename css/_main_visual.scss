@@ -103,12 +103,12 @@
       .slogan {
         position: absolute;
         top: 75%;
+        text-shadow: 0 0 3px #000;
         h2 {
-          
           font-size: 32rem;
           font-weight: 700;
           color: $color-white;
-  
+
           &::after {
             content: "";
             display: block;
@@ -116,9 +116,10 @@
             height: 2rem;
             margin: 16rem 0 16rem 0;
             background: $color-white;
+            box-shadow: 0 0 3px #000;
           }
         }
-  
+
         p {
           font-size: 16rem;
           font-weight: 300;
@@ -127,36 +128,33 @@
         }
       }
     }
-  
+
     .arrows {
       position: absolute;
-      top: 50%;
+      top: 92%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 1440px;
       width: 100%;
       padding: 0 15px;
       z-index: 999;
-  
+
       .left {
-        position: absolute;
-        left: 0;
-        font-size: 56rem;
-        color: rgba($color: $color-white, $alpha: 0);
+        position: static;
+        font-size: 32rem;
+        color: rgba($color: $color-white, $alpha: 1);
         cursor: pointer;
         transition: 0.5s;
       }
-  
+
       .right {
-        position: absolute;
-        right: 0;
-        font-size: 56rem;
-        color: rgba($color: $color-white, $alpha: 0);
+        position: static;
+        font-size: 32rem;
+        color: rgba($color: $color-white, $alpha: 1);
         cursor: pointer;
         transition: 0.5s;
       }
     }
-  
+
     &:hover {
       .arrows {
         .left {

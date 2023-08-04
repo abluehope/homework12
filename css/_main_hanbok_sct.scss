@@ -20,17 +20,29 @@
   }
 
   @include res() {
-  background-position: center center;
-  background-size: cover;
-  background-attachment: inherit;
-  .inner {
-    padding: 320rem 15rem;
-    h2 {
-      width: auto;
+    position: relative;
+    background-position: center top;
+    background-size: cover;
+
+    .inner {
+      position: relative;
+      padding: 120rem 15rem;
+      z-index: 998;
+      h2 {
+        width: auto;
+        color: $color-white;
+      }
+      p {
+        width: auto;
+        color: $color-white;
+      }
     }
-    p {
-      width: auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 0;
+      background: rgba(0, 0, 0, 0.35);
     }
-  }
   }
 }

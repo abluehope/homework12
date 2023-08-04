@@ -66,15 +66,18 @@
     }
     .top {
       .txt_box {
-        padding: 32rem 0 0 0;
+        padding: 0;
       }
     }
     .bottom {
+      height: auto;
       .txt_box {
-        padding: 24rem 0 0 0;
+        padding: 0;
+        order: 2;
       }
       .img_box {
         transform: translate(0, 0);
+        order: 1;
       }
     }
   }

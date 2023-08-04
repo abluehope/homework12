@@ -56,15 +56,11 @@
   }
 
   @include res() {
-    .sbar {
-      padding: 0 15rem;
-    }
-  
     .arrows {
       .left {
         font-size: 32rem;
       }
-  
+
       .right {
         font-size: 32rem;
       }

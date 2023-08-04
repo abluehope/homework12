@@ -52,8 +52,16 @@
       margin: 0;
       .txt_box {
         flex: 1;
+        padding: 0 15rem;
+        p {
+          margin: 0 0 16rem 0;
+        }
+        .ctr {
+          margin: 0 0 16rem 0;
+        }
       }
-      .movie_box {  
+      .movie_box {
+        min-height: 320rem;
         clip-path: none;
       }
     }

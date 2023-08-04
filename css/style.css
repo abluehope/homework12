@@ -265,6 +265,7 @@ address {
   .main_visual .main_slide .slogan {
     position: absolute;
     top: 75%;
+    text-shadow: 0 0 3px #000;
   }
   .main_visual .main_slide .slogan h2 {
     font-size: 32rem;
@@ -278,6 +279,7 @@ address {
     height: 2rem;
     margin: 16rem 0 16rem 0;
     background: #ffffff;
+    box-shadow: 0 0 3px #000;
   }
   .main_visual .main_slide .slogan p {
     font-size: 16rem;
@@ -287,27 +289,24 @@ address {
   }
   .main_visual .arrows {
     position: absolute;
-    top: 50%;
+    top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 1440px;
     width: 100%;
     padding: 0 15px;
     z-index: 999;
   }
   .main_visual .arrows .left {
-    position: absolute;
-    left: 0;
-    font-size: 56rem;
-    color: rgba(255, 255, 255, 0);
+    position: static;
+    font-size: 32rem;
+    color: white;
     cursor: pointer;
     transition: 0.5s;
   }
   .main_visual .arrows .right {
-    position: absolute;
-    right: 0;
-    font-size: 56rem;
-    color: rgba(255, 255, 255, 0);
+    position: static;
+    font-size: 32rem;
+    color: white;
     cursor: pointer;
     transition: 0.5s;
   }
@@ -376,13 +375,18 @@ address {
     line-height: 22rem;
   }
   .main_intro .top .txt_box {
-    padding: 32rem 0 0 0;
+    padding: 0;
+  }
+  .main_intro .bottom {
+    height: auto;
   }
   .main_intro .bottom .txt_box {
-    padding: 24rem 0 0 0;
+    padding: 0;
+    order: 2;
   }
   .main_intro .bottom .img_box {
     transform: translate(0, 0);
+    order: 1;
   }
 }
 
@@ -495,9 +499,6 @@ address {
   color: #c27b61;
 }
 @media (max-width: 768px) {
-  .main_gallery .sbar {
-    padding: 0 15rem;
-  }
   .main_gallery .arrows .left {
     font-size: 32rem;
   }
@@ -552,8 +553,16 @@ address {
   }
   .main_fashionshow .content_wrap .txt_box {
     flex: 1;
+    padding: 0 15rem;
+  }
+  .main_fashionshow .content_wrap .txt_box p {
+    margin: 0 0 16rem 0;
+  }
+  .main_fashionshow .content_wrap .txt_box .ctr {
+    margin: 0 0 16rem 0;
   }
   .main_fashionshow .content_wrap .movie_box {
+    min-height: 320rem;
     -webkit-clip-path: none;
             clip-path: none;
   }
@@ -658,18 +667,28 @@ address {
 }
 @media (max-width: 768px) {
   .main_hanbok_sct {
-    background-position: center center;
+    position: relative;
+    background-position: center top;
     background-size: cover;
-    background-attachment: inherit;
   }
   .main_hanbok_sct .inner {
-    padding: 320rem 15rem;
+    position: relative;
+    padding: 120rem 15rem;
+    z-index: 998;
   }
   .main_hanbok_sct .inner h2 {
     width: auto;
+    color: #ffffff;
   }
   .main_hanbok_sct .inner p {
     width: auto;
+    color: #ffffff;
+  }
+  .main_hanbok_sct::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.35);
   }
 }
 
