@@ -12,9 +12,19 @@ $(function () {
   const main_slide = new Swiper(".main_slide", {
     loop: true,
     speed: 1000,
+    effect: "fade",
     autoplay: {
       delay: 6000,
       disableOnInteraction: false,
+    },
+    on: {
+      slideChangeTransitionStart: function () {
+        $(".main_visual .dots li")
+          .eq(this.realIndex)
+          .addClass("on")
+          .siblings()
+          .removeClass("on");
+      },
     },
   });
 
@@ -23,6 +33,12 @@ $(function () {
   });
   $(".main_visual .arrows .right").on("click", function () {
     main_slide.slideNext();
+  });
+
+  $(".main_visual .dots li").on("click", function () {
+    const idx = $(this).index();
+    $(this).addClass("on").siblings().removeClass("on");
+    MainSlide.slideTo(idx);
   });
 
   const gallery_slide = new Swiper(".gallery_slide", {
@@ -101,5 +117,10 @@ $(function () {
 
   $(".to_top").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, 500);
+  });
+
+  $(".mobile_btn").on("click", function () {
+    $(this).toggleClass("on");
+    $(".gnb").toggleClass("on");
   });
 });

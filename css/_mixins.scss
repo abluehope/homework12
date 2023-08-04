@@ -14,6 +14,7 @@
 @mixin btn() {
   padding: 8rem 13rem 8rem 16rem;
   background: $color-main;
+  color: $color-white;
 }
 
 @mixin res() {

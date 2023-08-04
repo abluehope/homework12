@@ -78,9 +78,15 @@ address {
   margin: 0 0 16rem 0;
 }
 .sec .title .desc {
-  font-size: 16rem;
   font-weight: 400;
   color: #666;
+  line-height: 22rem;
+}
+@media (max-width: 768px) {
+  .sec .title h2 {
+    font-size: 32rem;
+    margin: 0 0 16rem 0;
+  }
 }
 
 .more {
@@ -93,6 +99,7 @@ address {
 .btn {
   padding: 8rem 13rem 8rem 16rem;
   background: #c27b61;
+  color: #ffffff;
 }
 .btn::after {
   margin: 0 0 0 5rem;
@@ -143,7 +150,13 @@ address {
   font-size: 18rem;
   font-weight: 500;
 }
+.header .mobile_btn {
+  display: none;
+}
 @media (max-width: 768px) {
+  .header .inner {
+    height: 80rem;
+  }
   .header .inner h1 {
     z-index: 1000;
   }
@@ -156,6 +169,8 @@ address {
     width: calc(100% - 90rem);
     height: 100vh;
     padding: 150px 24px 0 24px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.5s;
   }
   .header .inner .gnb.on {
     left: 0;
@@ -171,6 +186,54 @@ address {
   .header .inner .gnb > ul li a {
     font-size: 18rem;
     font-weight: 500;
+  }
+  .header .mobile_btn {
+    display: block;
+    position: fixed;
+    inset: 25rem 30rem auto auto;
+    z-index: 1000;
+    width: 30rem;
+    height: 30rem;
+  }
+  .header .mobile_btn::before, .header .mobile_btn::after {
+    content: "";
+    position: absolute;
+    inset: 14px 5px auto 5px;
+    height: 2px;
+    background: #333333;
+    transition: 0.5s;
+  }
+  .header .mobile_btn button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .header .mobile_btn button::before {
+    content: "";
+    inset: 7px 5px auto 5px;
+    position: absolute;
+    height: 2px;
+    background: #333333;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .header .mobile_btn button::after {
+    content: "";
+    inset: auto 5px 7px 5px;
+    position: absolute;
+    height: 2px;
+    background: #333333;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .header .mobile_btn.on::before {
+    transform: rotate(45deg);
+  }
+  .header .mobile_btn.on::after {
+    transform: rotate(-45deg);
+  }
+  .header .mobile_btn.on button::before, .header .mobile_btn.on button::after {
+    opacity: 0;
   }
 }
 
@@ -243,6 +306,45 @@ address {
   cursor: pointer;
   transition: 0.5s;
 }
+.main_visual .dots {
+  display: flex;
+  gap: 50rem;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  left: 410rem;
+  transform: translate(-50%, -50%);
+  z-index: 998;
+}
+.main_visual .dots li {
+  position: relative;
+  cursor: pointer;
+}
+.main_visual .dots li span {
+  color: #ffffff;
+}
+.main_visual .dots li span::before {
+  content: "";
+  position: absolute;
+  bottom: -60%;
+  left: 0;
+  width: 50rem;
+  height: 2px;
+  background: #777;
+}
+.main_visual .dots li::after {
+  content: "";
+  position: absolute;
+  bottom: -60%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+}
+.main_visual .dots li.on::after {
+  width: 50rem;
+  transition: 6s;
+}
 .main_visual:hover .arrows .left {
   color: white;
 }
@@ -294,7 +396,7 @@ address {
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 0 15px;
-    z-index: 999;
+    z-index: 998;
   }
   .main_visual .arrows .left {
     position: static;
@@ -315,6 +417,13 @@ address {
   }
   .main_visual:hover .arrows .right {
     color: white;
+  }
+  .main_visual .dots {
+    top: 58%;
+    left: 58rem;
+  }
+  .main_visual .dots li span {
+    font-size: 12rem;
   }
 }
 
@@ -520,9 +629,11 @@ address {
   font-weight: 700;
   margin: 0 0 16rem 0;
 }
-.main_fashionshow .content_wrap .txt_box p {
+.main_fashionshow .content_wrap .txt_box .desc {
   margin: 0 0 32rem 0;
+  font-weight: 400;
   line-height: 22rem;
+  color: #666;
 }
 .main_fashionshow .content_wrap .txt_box .ctr .play {
   font-size: 40rem;
@@ -555,7 +666,10 @@ address {
     flex: 1;
     padding: 0 15rem;
   }
-  .main_fashionshow .content_wrap .txt_box p {
+  .main_fashionshow .content_wrap .txt_box h2 {
+    font-size: 32rem;
+  }
+  .main_fashionshow .content_wrap .txt_box .desc {
     margin: 0 0 16rem 0;
   }
   .main_fashionshow .content_wrap .txt_box .ctr {
@@ -678,6 +792,7 @@ address {
   }
   .main_hanbok_sct .inner h2 {
     width: auto;
+    font-size: 32rem;
     color: #ffffff;
   }
   .main_hanbok_sct .inner p {
