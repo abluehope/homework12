@@ -1,0 +1,73 @@
+.main_gallery {
+  position: relative;
+  background: $color-bg;
+
+  .sbar {
+    position: relative;
+    max-width: 1170rem;
+    margin: 30rem auto;
+    background: $color-body;
+
+    height: 5rem;
+    border-radius: 10rem;
+    overflow: hidden;
+
+    & span {
+      background: $color-main;
+    }
+  }
+
+  .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1240rem;
+    width: 100%;
+    padding: 0 15rem;
+    z-index: 998;
+
+    .left {
+      position: absolute;
+      left: 0;
+      font-size: 48rem;
+      cursor: pointer;
+      padding: 10rem 12rem 10rem 9rem;
+      background: $color-white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      transition: 0.5s;
+      &:hover {
+        color: $color-main;
+      }
+    }
+
+    .right {
+      position: absolute;
+      right: 0;
+      font-size: 48rem;
+      cursor: pointer;
+      padding: 10rem 9rem 10rem 12rem;
+      background: $color-white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+
+  @include res() {
+    .sbar {
+      padding: 0 15rem;
+    }
+  
+    .arrows {
+      .left {
+        font-size: 32rem;
+      }
+  
+      .right {
+        font-size: 32rem;
+      }
+    }
+  }
+}

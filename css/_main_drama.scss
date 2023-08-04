@@ -1,0 +1,81 @@
+.main_drama {
+  position: relative;
+  padding: 120rem 0 160rem 0;
+  background: $color-bg;
+  .dots {
+    position: absolute;
+    bottom: 120rem;
+    left: 50%;
+    z-index: 998;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    gap: 5rem;
+
+    li {
+      width: 16rem;
+      height: 16rem;
+      border-radius: 10rem;
+      background: rgba($color: $color-body, $alpha: 0.5);
+      cursor: pointer;
+      transition: width 0.5s;
+      span {
+        font-size: 0;
+      }
+      &.on {
+        width: 40rem;
+        background: rgba($color: $color-body, $alpha: 1);
+      }
+    }
+  }
+  .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1240rem;
+    width: 100%;
+    padding: 0 15rem;
+    z-index: 998;
+
+    .left {
+      position: absolute;
+      left: 0;
+      font-size: 48rem;
+      cursor: pointer;
+      padding: 10rem 12rem 10rem 9rem;
+      background: $color-white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      transition: 0.5s;
+      &:hover {
+        color: $color-main;
+      }
+    }
+
+    .right {
+      position: absolute;
+      right: 0;
+      font-size: 48rem;
+      cursor: pointer;
+      padding: 10rem 9rem 10rem 12rem;
+      background: $color-white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+
+  @include res() {
+    .arrows {
+      top: 55%;
+      .left {
+        font-size: 32rem;
+      }
+  
+      .right {        
+        font-size: 32rem;
+      }
+    }
+  }
+}

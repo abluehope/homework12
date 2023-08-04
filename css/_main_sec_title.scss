@@ -1,0 +1,25 @@
+.main_sec_title {
+  text-align: center;
+  h2 {
+    padding: 0 320rem 0 0;
+    font-size: 56rem;
+    font-family: "Bad Script", cursive;
+    color: $color-main;
+  }
+  strong {
+    padding: 0 0 0 320rem;
+    font-size: 40rem;
+  }
+
+  @include res() {
+    h2 {
+      padding: 0;
+      margin: 0 0 16rem 0;
+      font-size: 40rem;
+    }
+    strong {
+      padding: 0;
+      font-size: 32rem;
+    }
+  }
+}

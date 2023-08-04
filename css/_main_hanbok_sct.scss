@@ -1,0 +1,36 @@
+.main_hanbok_sct {
+  background-image: url(../images/section_05_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% -10%;
+  background-size: 45%;
+  background-attachment: fixed;
+  .inner {
+    padding: 320rem 15rem;
+    h2 {
+      margin: 0 0 40rem 0;
+      font-size: 40rem;
+      font-weight: 700;
+      width: 600rem;
+    }
+    p {
+      margin: 0 0 16rem 0;
+      width: 400rem;
+      line-height: 22rem;
+    }
+  }
+
+  @include res() {
+  background-position: center center;
+  background-size: cover;
+  background-attachment: inherit;
+  .inner {
+    padding: 320rem 15rem;
+    h2 {
+      width: auto;
+    }
+    p {
+      width: auto;
+    }
+  }
+  }
+}

@@ -1,0 +1,61 @@
+.main_fashionshow {
+  .content_wrap {
+    display: flex;
+    width: calc((100% - 1440px) / 2 + 1300px);
+    margin: 0 0 0 auto;
+    .txt_box {
+      flex: 0 400rem;
+      h2 {
+        font-size: 40rem;
+        font-weight: 700;
+        margin: 0 0 16rem 0;
+      }
+
+      p {
+        margin: 0 0 32rem 0;
+        line-height: 22rem;
+      }
+
+      .ctr {
+        .play {
+          font-size: 40rem;
+          cursor: pointer;
+
+          &:hover {
+            color: $color-main;
+          }
+        }
+
+        .pause {
+          font-size: 40rem;
+          cursor: pointer;
+
+          &:hover {
+            color: $color-main;
+          }
+        }
+      }
+    }
+    .movie_box {
+      flex: 1;
+      background: #ccc;
+      min-height: 500rem;
+
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  @include res() {
+    .content_wrap {
+      width: auto;
+      flex-direction: column;
+      margin: 0;
+      .txt_box {
+        flex: 1;
+      }
+      .movie_box {  
+        clip-path: none;
+      }
+    }
+  }
+}

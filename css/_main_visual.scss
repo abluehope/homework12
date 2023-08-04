@@ -1,0 +1,171 @@
+.main_visual {
+  position: relative;
+  .main_slide {
+    .itm {
+      position: relative;
+      height: 800rem;
+    }
+    .main_slide_hb {
+      background: url(../images/main_visual_01.jpg) no-repeat top center/cover;
+      p {
+        width: 350rem;
+      }
+    }
+    .main_slide_hk {
+      background: url(../images/main_visual_02.jpg) no-repeat top center/cover;
+    }
+    .slogan {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      h2 {
+        position: relative;
+        font-size: 48rem;
+        font-weight: 700;
+        color: $color-white;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 160rem;
+          height: 2rem;
+          margin: 24rem 0 24rem 0;
+          background: $color-white;
+        }
+      }
+
+      p {
+        font-size: 18rem;
+        font-weight: 300;
+        color: $color-white;
+        line-height: 24rem;
+      }
+    }
+  }
+
+  .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 999;
+
+    .left {
+      position: absolute;
+      left: 0;
+      font-size: 56rem;
+      color: rgba($color: $color-white, $alpha: 0);
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .right {
+      position: absolute;
+      right: 0;
+      font-size: 56rem;
+      color: rgba($color: $color-white, $alpha: 0);
+      cursor: pointer;
+      transition: 0.5s;
+    }
+  }
+
+  &:hover {
+    .arrows {
+      .left {
+        color: rgba($color: $color-white, $alpha: 1);
+      }
+      .right {
+        color: rgba($color: $color-white, $alpha: 1);
+      }
+    }
+  }
+
+  @include res() {
+    .main_slide {
+      .itm {
+        height: 520rem;
+      }
+      .main_slide_hb {
+        background: url(../images/main_visual_01.jpg) no-repeat 65% top/cover;
+        p {
+          width: auto;
+        }
+      }
+      .main_slide_hk {
+        background: url(../images/main_visual_02.jpg) no-repeat 65% top/cover;
+      }
+      .slogan {
+        position: absolute;
+        top: 75%;
+        h2 {
+          
+          font-size: 32rem;
+          font-weight: 700;
+          color: $color-white;
+  
+          &::after {
+            content: "";
+            display: block;
+            width: 160rem;
+            height: 2rem;
+            margin: 16rem 0 16rem 0;
+            background: $color-white;
+          }
+        }
+  
+        p {
+          font-size: 16rem;
+          font-weight: 300;
+          color: $color-white;
+          line-height: 22rem;
+        }
+      }
+    }
+  
+    .arrows {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 1440px;
+      width: 100%;
+      padding: 0 15px;
+      z-index: 999;
+  
+      .left {
+        position: absolute;
+        left: 0;
+        font-size: 56rem;
+        color: rgba($color: $color-white, $alpha: 0);
+        cursor: pointer;
+        transition: 0.5s;
+      }
+  
+      .right {
+        position: absolute;
+        right: 0;
+        font-size: 56rem;
+        color: rgba($color: $color-white, $alpha: 0);
+        cursor: pointer;
+        transition: 0.5s;
+      }
+    }
+  
+    &:hover {
+      .arrows {
+        .left {
+          color: rgba($color: $color-white, $alpha: 1);
+        }
+        .right {
+          color: rgba($color: $color-white, $alpha: 1);
+        }
+      }
+    }
+  }
+}
